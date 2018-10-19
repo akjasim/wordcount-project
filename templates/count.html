@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Word Count</title>
+</head>
+<body style="font-family: Exo,sans-serif;">
+    <h1>There are {{ count }} words in the given text.</h1>
+    <a href="{% url 'home' %}">Start Again?</a>
+    <h3>Given Text:</h3>
+    {{ fulltext }}
+    <h3>Counted Words:</h3>
+    {% for word,counttotal in sortedlist %}
+        {{ word }} -- {{ counttotal }}
+        <br />
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Word Counter</title>
+</head>
+<body style="font-family: Exo,sans-serif;">
+    <h1 align="center">Word Counter</h1>
+    <center>
+    <a href="{% url 'about' %}">About</a>
+        <br/><br/>
+    <form action="{% url 'count' %}">
+        <textarea rows="25" cols="120" name="fulltext"></textarea>
+        <br/><br />
+        <input type="submit" value="COUNT!" />
+    </form>
+    </center>
+
+</body>
+</html>
